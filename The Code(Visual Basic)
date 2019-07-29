@@ -1,0 +1,64 @@
+Private Sub CommandButton1_Click()
+Dim o, ö As Variant
+o = 2
+ö = 2
+ş = 2
+p = 2
+r = 2
+s = 2
+k = 2
+Range("A1") = "MerchGrup"
+Range("B1") = "MerchAltGrup"
+Range("C1") = "Sezon"
+Range("D1") = "Ad"
+Range("E1") = "Renk"
+Range("F1") = "Depo"
+Range("G1") = "Reyon"
+    Sayfa2.Cells(o, 24) = Sayfa2.Cells(ö, 8)
+    Sayfa2.Cells(o, 25) = Sayfa2.Cells(ö, 13)
+Do While (Sayfa2.Cells(ö, 8) > 0)
+    If (Sayfa2.Cells(ö, 8) = Sayfa2.Cells(ö + 1, 8)) Then
+        ö = ö + 1
+    Else
+        o = o + 1
+        Sayfa2.Cells(o, 24) = Sayfa2.Cells(ö + 1, 8)
+        Sayfa2.Cells(o, 25) = Sayfa2.Cells(ö + 1, 13)
+        ö = ö + 1
+    End If
+Loop
+
+
+Do While (Sayfa2.Cells(ş, 1) > 0)
+    If (Sayfa2.Cells(p, 24) = Sayfa3.Cells(r, 8) And Sayfa2.Cells(p, 25) = Sayfa3.Cells(r, 13)) Then
+        Cells(s, 1) = Sayfa3.Cells(r, 5)
+        Cells(s, 2) = Sayfa3.Cells(r, 6)
+        Cells(s, 3) = Sayfa3.Cells(r, 7)
+        Cells(s, 4) = Sayfa3.Cells(r, 8)
+        Cells(s, 5) = Sayfa3.Cells(r, 13)
+        Cells(s, 6) = Sayfa3.Cells(r, 17)
+        Cells(s, 7) = Sayfa3.Cells(r, 18)
+        s = s + 1
+        If (Sayfa3.Cells(k, 2) = Sayfa3.Cells(k, 2)) Then
+            r = r + 1
+        Else
+            h = 2
+            f = f + 1
+            g = g + 1
+        End If
+    ElseIf (Sayfa3.Cells(r + 1, 8) > 0) Then
+        r = r + 1
+    Else
+        p = p + 1
+        ş = ş + 1
+        r = 2
+    End If
+Loop
+        
+MsgBox ("İşlem Tamamlandı")
+End Sub
+
+Private Sub CommandButton2_Click()
+Cells.ClearContents
+Cells.ClearFormats
+MsgBox ("İşlem Tamamlandı")
+End Sub
