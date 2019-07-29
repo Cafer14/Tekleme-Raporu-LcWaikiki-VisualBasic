@@ -1,0 +1,1 @@
+# Tekleme-Raporu-LcWaikiki-VisualBasic
